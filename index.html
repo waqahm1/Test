@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Campaign</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #35424a;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        main {
+            padding: 1rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+        h1, h2 {
+            color: #35424a;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+        .video {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        .video img, .video video {
+            width: 100%;
+            height: auto;
+        }
+        .tab-container {
+            margin-top: 1rem;
+        }
+        .tab-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        .tab-button {
+            padding: 0.5rem 1rem;
+            background-color: #35424a;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            flex-grow: 1;
+            text-align: center;
+        }
+        .tab-button.active {
+            background-color: #4a5c66;
+        }
+        .tab-content {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .tab-pane {
+            display: none;
+        }
+        .tab-pane.active {
+            display: block;
+        }
+        .who-we-are {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .who-we-are img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .video {
+                width: 48%;
+            }
+            .tab-button {
+                flex-grow: 0;
+            }
+            .who-we-are {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            .who-we-are img {
+                margin-right: 2rem;
+                margin-bottom: 0;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .video {
+                width: 31%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Candidate for a Better Future</h1>
+    </header>
+    <main>
+        <div class="tab-container">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="videos">Videos</button>
+                <button class="tab-button" data-tab="who-we-are">Who We Are</button>
+                <button class="tab-button" data-tab="past">What We Did</button>
+                <button class="tab-button" data-tab="future">What We're Planning</button>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="videos">
+                    <h2>Campaign Videos</h2>
+                    <div class="video-container">
+                        <div class="video">
+                            <video width="100%" controls>
+                                <source src="video1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p>Vision for the Future</p>
+                        </div>
+                        <!-- ... (repeat for all 7 videos) ... -->
+                    </div>
+                </div>
+                <div class="tab-pane" id="who-we-are">
+                    <h2>Who We Are</h2>
+                    <div class="who-we-are">
+                        <img src="/api/placeholder/200/200" alt="Candidate Photo">
+                        <p>
+                            As your dedicated candidate, I bring a wealth of experience in public service and a passion for community development. With a background in urban planning and environmental policy, I've spent the last 15 years working tirelessly to improve our city's infrastructure and sustainability initiatives. My vision for our future is built on the foundation of inclusive growth, environmental stewardship, and technological innovation. Together, we can create a thriving community that sets the standard for 21st-century urban living.
+                        </p>
+                    </div>
+                </div>
+                <div class="tab-pane" id="past">
+                    <h2>What We Did</h2>
+                    <ul>
+                        <li>Implemented a comprehensive city-wide recycling program</li>
+                        <li>Launched free coding bootcamps for underprivileged youth</li>
+                        <li>Renovated and modernized 15 public parks</li>
+                        <li>Introduced a small business support initiative</li>
+                        <li>Expanded public transportation routes by 25%</li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="future">
+                    <h2>What We're Planning</h2>
+                    <ul>
+                        <li>Develop a green energy initiative to reduce carbon emissions by 40% in 5 years</li>
+                        <li>Establish a free community college program for local residents</li>
+                        <li>Create a startup incubator to foster innovation and job growth</li>
+                        <li>Implement a comprehensive mental health support system</li>
+                        <li>Launch a city-wide affordable housing project</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

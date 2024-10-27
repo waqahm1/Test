@@ -126,12 +126,112 @@
     <main>
       <div class="tab-container">
         <div class="tab-buttons">
-          <button class="tab-button active" data-tab="who-we-are">Who We Are</button>
+          <button class="tab-button active" data-tab="home">Home</button>
+          <button class="tab-button" data-tab="who-we-are">Who We Are</button>
           <button class="tab-button" data-tab="videos">Videos</button>
           <button class="tab-button" data-tab="past">What We Did</button>
           <button class="tab-button" data-tab="future">What We're Planning</button>
         </div>
         <div class="tab-content">
+          <div class="tab-pane active" id="home">
+            <div style="text-align: center; padding: 2rem 0">
+              <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #35424a">2024 GDMA Elections</h2>
+              <div style="font-size: 1.8rem; color: #4a5c66; margin-bottom: 2rem">Your Voice, Your Vote</div>
+
+              <!-- Team Members Section -->
+              <div style="margin: 2rem auto; max-width: 1000px">
+                <h3 style="color: #35424a; margin-bottom: 2rem">Meet Our Candidates</h3>
+                <!-- Top Row (3 members) -->
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-bottom: 2rem">
+                  <!-- Member 1 -->
+                  <div style="text-align: center; width: 200px">
+                    <img src="assets/bf.png" alt="Candidate Photo" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)" />
+                    <h4 style="color: #35424a; margin: 0.5rem 0">Bilal Farooq</h4>
+                    <p style="color: #666; font-size: 0.9rem">Standing for Chairman</p>
+                  </div>
+                  <!-- Member 2 -->
+                  <div style="text-align: center; width: 200px">
+                    <img src="assets/aknew.png" alt="Candidate Photo" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)" />
+                    <h4 style="color: #35424a; margin: 0.5rem 0">Adnan Khan</h4>
+                    <p style="color: #666; font-size: 0.9rem">Standing for Treasurer</p>
+                  </div>
+                  <!-- Member 3 -->
+                  <div style="text-align: center; width: 200px">
+                    <img src="assets/nopic.png" alt="Candidate Photo" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)" />
+                    <h4 style="color: #35424a; margin: 0.5rem 0">Imran Tahir</h4>
+                    <p style="color: #666; font-size: 0.9rem">Standing for Secretary</p>
+                  </div>
+                </div>
+
+                <!-- Bottom Row (4 members) -->
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem">
+                  <!-- Member 4 -->
+                  <div style="text-align: center; width: 200px">
+                    <img src="assets/oinew.png" alt="Candidate Photo" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)" />
+                    <h4 style="color: #35424a; margin: 0.5rem 0">Omar Ilyas</h4>
+                    <p style="color: #666; font-size: 0.9rem">Standing for Executive Member</p>
+                  </div>
+                  <!-- Member 5 -->
+                  <div style="text-align: center; width: 200px">
+                    <img src="assets/smnew.png" alt="Candidate Photo" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)" />
+                    <h4 style="color: #35424a; margin: 0.5rem 0">Shiyamin Mohamed</h4>
+                    <p style="color: #666; font-size: 0.9rem">Standing for Executive Member</p>
+                  </div>
+                  <!-- Member 6 -->
+                  <div style="text-align: center; width: 200px">
+                    <img src="assets/yanew.png" alt="Candidate Photo" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)" />
+                    <h4 style="color: #35424a; margin: 0.5rem 0">Yahaya Alawoki</h4>
+                    <p style="color: #666; font-size: 0.9rem">Standing for Executive Member</p>
+                  </div>
+                  <!-- Member 7 -->
+                  <div style="text-align: center; width: 200px">
+                    <img src="assets/wa.png" alt="Candidate Photo" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)" />
+                    <h4 style="color: #35424a; margin: 0.5rem 0">Waqar Ahmad</h4>
+                    <p style="color: #666; font-size: 0.9rem">Standing for Executive Member</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Featured Video Section -->
+              <div style="margin: 2rem auto; max-width: 800px; background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)">
+                <h3 style="color: #35424a; margin-bottom: 1rem">Campaign Message</h3>
+                <div class="video" style="margin-bottom: 1rem; display: inline-flex">
+                  <video width="100%" controls>
+                    <source src="assets/homepage.MP4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p style="color: #666; font-style: italic">Watch our campaign message from our Chairman</p>
+              </div>
+
+              <!-- Election Date Card -->
+              <div style="background: white; border-radius: 8px; padding: 2rem; margin: 2rem auto; max-width: 600px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)">
+                <h3 style="color: #35424a; margin-bottom: 1rem">Mark Your Calendar</h3>
+                <div style="font-size: 1.2rem; color: #4a5c66">
+                  <p style="margin-bottom: 0.5rem">📅 7th December 2024</p>
+                  <p style="margin-bottom: 1rem">⏰ 8:00 AM - 8:00 PM</p>
+                </div>
+              </div>
+
+              <!-- Key Information -->
+              <div style="background: #f7f7f7; padding: 2rem; border-radius: 8px; margin-top: 2rem">
+                <h3 style="color: #35424a; margin-bottom: 1.5rem">Important Information</h3>
+                <ul style="list-style: none; padding: 0; text-align: left; max-width: 500px; margin: 0 auto">
+                  <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative">✓ Bring your valid ID</li>
+                  <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative">✓ TEXT</li>
+                  <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative">✓ TEXT</li>
+                  <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative">✓ Your vote is confidential and secure</li>
+                </ul>
+              </div>
+
+              <!-- Call to Action -->
+              <div style="margin-top: 2rem">
+                <h3 style="color: #35424a; margin-bottom: 1rem">Get Involved</h3>
+                <p style="color: #666; max-width: 600px; margin: 0 auto">Democracy works best when everyone participates. Make sure your voice is heard in this important election.</p>
+              </div>
+            </div>
+          </div>
+
           <!-- <div class="tab-pane active" id="who-we-are">
             <h2>Who We Are</h2>
             <div class="who-we-are">
@@ -218,7 +318,7 @@
             </div>
           </div> -->
 
-          <div class="tab-pane active" id="who-we-are">
+          <div class="tab-pane" id="who-we-are">
             <h2>Who We Are</h2>
 
             <div class="who-we-are">

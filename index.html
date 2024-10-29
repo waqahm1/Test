@@ -16,10 +16,13 @@
         background-color: #f4f4f4;
       }
       header {
-        background-color: #35424a;
+        background-color: #2393d8;
         color: white;
         text-align: center;
         padding: 1rem;
+      }
+      .headerText {
+        color: white;
       }
       main {
         padding: 1rem;
@@ -54,7 +57,7 @@
       }
       .tab-button {
         padding: 0.5rem 1rem;
-        background-color: #35424a;
+        background-color: #2393d8;
         color: white;
         border: none;
         cursor: pointer;
@@ -64,7 +67,7 @@
         text-align: center;
       }
       .tab-button.active {
-        background-color: #4a5c66;
+        background-color: #2393d8;
       }
       .tab-content {
         background-color: white;
@@ -121,20 +124,22 @@
   </head>
   <body>
     <header>
-      <h1>Your Candidate for a Better Future</h1>
+      <h1 class="headerText">Vote Team BLUE</h1>
     </header>
     <main>
       <div class="tab-container">
         <div class="tab-buttons">
           <button class="tab-button active" data-tab="home">Home</button>
-          <button class="tab-button" data-tab="who-we-are">Who We Are</button>
+          <button class="tab-button" data-tab="who-we-are">Meet Our Team</button>
           <button class="tab-button" data-tab="videos">Videos</button>
-          <button class="tab-button" data-tab="past">What We Did</button>
-          <button class="tab-button" data-tab="future">What We're Planning</button>
+          <button class="tab-button" data-tab="past">Our Track Records</button>
+          <button class="tab-button" data-tab="future">Our Vision</button>
         </div>
         <div class="tab-content">
           <div class="tab-pane active" id="home">
             <div style="text-align: center; padding: 2rem 0">
+              <h1 style="font-size: 2.5rem; margin-bottom: 1rem; color: #2393d8">Vote Team BLUE</h1>
+
               <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #35424a">2024 GDMA Elections</h2>
               <div style="font-size: 1.8rem; color: #4a5c66; margin-bottom: 2rem">Your Voice, Your Vote</div>
 
@@ -192,18 +197,6 @@
                 </div>
               </div>
 
-              <!-- Featured Video Section -->
-              <div style="margin: 2rem auto; max-width: 800px; background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)">
-                <h3 style="color: #35424a; margin-bottom: 1rem">Campaign Message</h3>
-                <div class="video" style="margin-bottom: 1rem; display: inline-flex">
-                  <video width="100%" controls>
-                    <source src="assets/homepageSmall.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <p style="color: #666; font-style: italic">Watch our campaign message from our Chairman</p>
-              </div>
-
               <!-- Election Date Card -->
               <div style="background: white; border-radius: 8px; padding: 2rem; margin: 2rem auto; max-width: 600px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)">
                 <h3 style="color: #35424a; margin-bottom: 1rem">Mark Your Calendar</h3>
@@ -222,12 +215,6 @@
                   <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative">✓ TEXT</li>
                   <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative">✓ Your vote is confidential and secure</li>
                 </ul>
-              </div>
-
-              <!-- Call to Action -->
-              <div style="margin-top: 2rem">
-                <h3 style="color: #35424a; margin-bottom: 1rem">Get Involved</h3>
-                <p style="color: #666; max-width: 600px; margin: 0 auto">Democracy works best when everyone participates. Make sure your voice is heard in this important election.</p>
               </div>
             </div>
           </div>
@@ -319,7 +306,7 @@
           </div> -->
 
           <div class="tab-pane" id="who-we-are">
-            <h2>Who We Are</h2>
+            <h2>Meet Our Team</h2>
 
             <div class="who-we-are">
               <img src="assets/bf.png" alt="Candidate Photo" />
@@ -375,26 +362,28 @@
 
             <div class="who-we-are">
               <img src="assets/nopic.png" alt="Candidate Photo" />
-              <h3>Imran Tahir - Standing for Secretary</h3>
-              <p>IMRAN PROFILE</p>
+              <div>
+                <h3>Imran Tahir - Standing for Secretary</h3>
+                <p>Imran was born in Gravesend and has been connected to our mosque from a young age.</p>
+                <p>Imran has served as an executive member for the past three years, in which time he has made a number of important contributions including serving on the Education committee.</p>
+                <p>This year alone he has claimed Gift Aid on behalf of the mosque, arranged security guards for the mosque through the Home Office, and produced a guide to explain the funeral process to those with deceased family members.</p>
+                <p>Professionally, he works as a research economist. He has presented his research to the government, the civil service and at international conferences.</p>
+                <p>His research has featured many media outlets, including the BBC and The Financial Times.</p>
+                <p>Imran holds degrees from LSE and UCL and is currently completing his PhD in Economics.</p>
+              </div>
             </div>
 
             <div class="who-we-are">
               <img src="assets/oinew.png" alt="Candidate Photo" />
               <div>
                 <h3>Omar Ilyas - Standing for Executive Member</h3>
+                <p>Omar has a wealth of experience in business development, holding senior roles with global brands like Hamleys. He is currently leading the expansion of Creams dessert franchise into the Middle East.</p>
+                <p>Omar has a degree in Economics and Statistics. He has worked internationally and is fluent in several languages, including Arabic and Spanish, which gives him a unique ability to connect with our diverse community.</p>
+                <p>Since moving to Gravesend, where his children attend the madrasah, Omar has been inspired by the strength and unity of our local Muslim community.</p>
                 <p>
-                  My name is Omar Ilyas and I work in international business development. I have worked for some large retail and hospitality brands, managing experience, hospitality, corporate relations and international development, connecting with
-                  government authorities around the world as well as at council level within Central London.
+                  Omar has always been close to charitable projects and is eager to give back. He wants to lead outreach programs that will strengthen the integration of the Muslim community in Gravesham and build connections with other faith groups.
                 </p>
-                <p>
-                  My business experience has given me the opportunity to work in many countries across the middle east and far east, and I am able to speak a few languages conversationally, including Spanish and Arabic. I was born and brought up in
-                  South London to Pakistani Punjabi and Kashmiri parents, and recently moved to Gravesend where I have been impressed by the strength of the Muslim community.
-                </p>
-                <p>
-                  I have always been close to charitable projects and want to spend my spare time being dedicated to my faith and my local community. I am very keen to support the day to day operations of the masjid whilst also helping to develop new
-                  outreach programmes to the wider Gravesham population, supporting muslim integration within the area, as well as relations with other faith groups. I look forward to serving our community together.
-                </p>
+                <p>Omar is ready to make a meaningful impact. Let’s support him as he steps forward to serve our community.</p>
               </div>
             </div>
 
@@ -402,24 +391,10 @@
               <img src="assets/smnew.png" alt="Candidate Photo" />
               <div>
                 <h3>Shiyamin Mohamed - Standing for Executive Member</h3>
-                <p>
-                  My name is Shiyamin Mohamed, I have professionally extensive experience in various ICT roles across government sectors, private enterprises, the NHS, and the United Nations - ILO. Charity is a fundamental pillar of Islam, and I am
-                  deeply passionate about making a positive impact in the community through dedicated charity work, particularly focusing on rural entrepreneurship and children's educational needs.
-                </p>
-                <p>
-                  My journey in charity work began after my Graduation with my role at the United Nations - ILO, where I worked on a rural entrepreneurship development program in Sri Lanka. This experience ignited a profound sense of purpose and
-                  commitment to helping startups and contributing to the economy. Since then, I have organized fundraising campaigns to support my school, which led to the establishment of a proper organization to elevate our charity work.
-                </p>
-                <p>
-                  As one of the founders of the registered charity Old Sokians United kingdom and current President, I have initiated various projects benefiting the education of children at my school. These projects include donations of science
-                  books, laptops, cricket kits for the school cricket team, PA addressing systems, overhead projectors, air rifles for the shooting team, renovation of staff washroom facilities, enhancing hygiene for primary children, and renovation
-                  of chemistry lab.
-                </p>
-                <p>
-                  Beyond my school, also donated an ultrasound scanner to our local hospital to benefit community and constructed toilet facilities in rural schools, along with donating shoes, socks, and savings accounts with an initial deposit for
-                  all children. I believe that charity work is not just about giving but also about empowering others and fostering sustainable change. My passion is to continue contributing to meaningful charity work that benefit our community,
-                  improve the quality of life for future generations, and advocate for the causes I am passionate about.
-                </p>
+                <p>Shiyamin has founded and served as President of his own charity (Sokians UK) for the past 14 years. A UK registered charity that helps disadvantaged children in Sri Lanka.</p>
+                <p>He has extensive professional experience as an ICT technical lead working across government, the NHS, and even the United Nations!</p>
+                <p>For the past three years Shiyamin has been a tireless volunteer in the GDMA children’s football and runs the GDMA badminton club.</p>
+                <p>Shiyamin is passionate about volunteering and Insha’Allah will be bring so much to our community!</p>
               </div>
             </div>
 
@@ -448,30 +423,30 @@
               <img src="assets/wa.png" alt="Candidate Photo" />
               <div>
                 <h3>Waqar Ahmad - Standing for Executive Member</h3>
-                <p>
-                  I was born and raised in Gravesend, where I have spent my life witnessing the growth and expansion of the Muslim community through different nationalities and cultures. This multicultural environment not only shaped my worldview but
-                  also instilled in me a strong sense of community, belonging and responsibility towards those around me.
-                </p>
-                <p>
-                  I studied Computer Science at university, and with the skills I attained, I am now working as a Software Developer in London for an International Law Firm. With the skills I have gained, I am committed to serve the mosque as an
-                  Executive Member and will be available to provide support to the Mosque.
-                </p>
+                <p>Waqar was born and raised in Gravesend and has been connected to the mosque and community from a young age.</p>
+                <p>He works as a software developer and has a degree in computer science. These skills will be crucial to building our mosque’s IT infrastructure.</p>
 
-                <p>
-                  Being a part of the younger generation in the mosque, I understand the importance of empowering the youth and ensuring they have a voice in shaping the future of our community. I believe that by engaging more young people in the
-                  mosque’s activities, we can foster a sense of belonging and encourage them to contribute their ideas, time, and talents.
-                </p>
+                <p>Waqar is passionate about giving back to his community and progressing the development of the masjid.</p>
 
-                <p>
-                  I aim to combine my technical expertise with my dedication to charity in the hope to further the mosque’s charitable efforts and ensure that we are using every available resource to uplift our community and make a positive impact.
-                  Whether it’s providing technical support, contributing to charitable projects, or assisting in day-to-day mosque activities, I am wholeheartedly committed to serving our community in any way I can.
-                </p>
+                <p>He wants to ensure that young people have a voice in shaping the future of our community.</p>
+                <p>Join us in supporting our community’s next generation of leaders.</p>
               </div>
             </div>
           </div>
 
-          <div class="tab-pane" id="videos">
+          <div class="tab-pane" style="text-align: center" id="videos">
             <h2>Campaign Videos</h2>
+            <!-- Featured Video Section -->
+            <div style="margin: 2rem auto; max-width: 800px; background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)">
+              <h3 style="color: #35424a; margin-bottom: 1rem">Campaign Message</h3>
+              <div class="video" style="margin-bottom: 1rem; display: inline-flex">
+                <video width="100%" controls>
+                  <source src="assets/homepageSmall.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <p style="color: #666; font-style: italic">Watch our campaign message from our Chairman</p>
+            </div>
             <div class="video-container">
               <div class="video">
                 <video width="100%" controls>
@@ -526,7 +501,7 @@
           </div>
 
           <div class="tab-pane" id="past">
-            <h2>What We Did</h2>
+            <h2>Out Track Records</h2>
             <ul>
               <li>Eid in the Park</li>
               <li>Eid in the Park</li>
@@ -536,7 +511,7 @@
             </ul>
           </div>
           <div class="tab-pane" id="future">
-            <h2>What We're Planning</h2>
+            <h2>Our Vision</h2>
             <ul>
               <li>New Mosque</li>
               <li>New Mosque</li>

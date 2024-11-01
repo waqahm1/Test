@@ -164,10 +164,10 @@
       }
 
       .nav-buttons {
-        position: absolute;
-        bottom: -50px;
-        left: 0;
-        right: 0;
+        /* position: absolute; */
+        /* bottom: -50px; */
+        /* left: 0; */
+        /* right: 0; */
         display: flex;
         justify-content: center;
         gap: 20px;
@@ -650,10 +650,6 @@
                   <img src="manifesto/page10.jpg" alt="Page 10" draggable="false" />
                 </div>
               </div>
-              <!-- <div class="nav-buttons">
-                <button id="prevBtn" disabled>Previous</button>
-                <button id="nextBtn">Next</button>
-              </div> -->
             </div>
             <div class="nav-buttons">
               <button id="prevBtn" disabled>Previous</button>
@@ -687,10 +683,10 @@
       //   return false;
       // });
 
-      document.addEventListener("dragstart", (e) => {
-        e.preventDefault();
-        return false;
-      });
+      // document.addEventListener("dragstart", (e) => {
+      //   e.preventDefault();
+      //   return false;
+      // });
 
       // Disable screenshot/save image via keyboard shortcuts
       // document.addEventListener("keydown", (e) => {
@@ -706,9 +702,9 @@
       const prevBtn = document.getElementById("prevBtn");
       const nextBtn = document.getElementById("nextBtn");
       let currentPage = 0;
-      let startX = 0;
-      let currentX = 0;
-      let isDragging = false;
+      // let startX = 0;
+      // let currentX = 0;
+      // let isDragging = false;
 
       // Rest of the previous JavaScript remains the same...
       // (Full previous script continues here)
@@ -737,63 +733,63 @@
         nextBtn.disabled = currentPage === pages.length - 1;
       }
 
-      function handleTouchStart(e) {
-        startX = e.touches[0].clientX;
-        isDragging = true;
+      // function handleTouchStart(e) {
+      //   startX = e.touches[0].clientX;
+      //   isDragging = true;
 
-        if (currentPage < pages.length) {
-          pages[currentPage].classList.add("turning");
-        }
-      }
+      //   if (currentPage < pages.length) {
+      //     pages[currentPage].classList.add("turning");
+      //   }
+      // }
 
-      function handleTouchMove(e) {
-        if (!isDragging) return;
+      // function handleTouchMove(e) {
+      //   if (!isDragging) return;
 
-        e.preventDefault();
-        currentX = e.touches[0].clientX;
-        const diff = currentX - startX;
-        const currentRotation = Math.min(0, Math.max(-180, (diff / book.offsetWidth) * -180));
+      //   e.preventDefault();
+      //   currentX = e.touches[0].clientX;
+      //   const diff = currentX - startX;
+      //   const currentRotation = Math.min(0, Math.max(-180, (diff / book.offsetWidth) * -180));
 
-        if (currentPage < pages.length) {
-          pages[currentPage].style.transform = `rotateY(${currentRotation}deg)`;
-        }
-      }
+      //   if (currentPage < pages.length) {
+      //     pages[currentPage].style.transform = `rotateY(${currentRotation}deg)`;
+      //   }
+      // }
 
-      function handleTouchEnd(e) {
-        if (!isDragging) return;
+      // function handleTouchEnd(e) {
+      //   if (!isDragging) return;
 
-        isDragging = false;
-        const diff = currentX - startX;
+      //   isDragging = false;
+      //   const diff = currentX - startX;
 
-        if (currentPage < pages.length) {
-          pages[currentPage].classList.remove("turning");
-        }
+      //   if (currentPage < pages.length) {
+      //     pages[currentPage].classList.remove("turning");
+      //   }
 
-        const swipeThreshold = window.innerWidth * 0.15;
+      //   const swipeThreshold = window.innerWidth * 0.15;
 
-        if (Math.abs(diff) > swipeThreshold) {
-          if (diff < 0 && currentPage < pages.length - 1) {
-            turnPage("next");
-          } else if (diff > 0 && currentPage > 0) {
-            turnPage("prev");
-          } else {
-            if (currentPage < pages.length) {
-              pages[currentPage].style.transform = "rotateY(0deg)";
-            }
-          }
-        } else {
-          if (currentPage < pages.length) {
-            pages[currentPage].style.transform = "rotateY(0deg)";
-          }
-        }
-      }
+      //   if (Math.abs(diff) > swipeThreshold) {
+      //     if (diff < 0 && currentPage < pages.length - 1) {
+      //       turnPage("next");
+      //     } else if (diff > 0 && currentPage > 0) {
+      //       turnPage("prev");
+      //     } else {
+      //       if (currentPage < pages.length) {
+      //         pages[currentPage].style.transform = "rotateY(0deg)";
+      //       }
+      //     }
+      //   } else {
+      //     if (currentPage < pages.length) {
+      //       pages[currentPage].style.transform = "rotateY(0deg)";
+      //     }
+      //   }
+      // }
 
       prevBtn.addEventListener("click", () => turnPage("prev"));
       nextBtn.addEventListener("click", () => turnPage("next"));
 
-      book.addEventListener("touchstart", handleTouchStart, { passive: true });
-      book.addEventListener("touchmove", handleTouchMove, { passive: false });
-      book.addEventListener("touchend", handleTouchEnd);
+      // book.addEventListener("touchstart", handleTouchStart, { passive: true });
+      // book.addEventListener("touchmove", handleTouchMove, { passive: false });
+      // book.addEventListener("touchend", handleTouchEnd);
 
       initializePages();
 

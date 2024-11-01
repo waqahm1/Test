@@ -120,6 +120,90 @@
           width: 31%;
         }
       }
+
+      .book {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+      }
+
+      .page {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 0 10px 10px 0;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        backface-visibility: hidden;
+        transform-origin: left center;
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+        overflow: hidden;
+      }
+
+      .page.turning {
+        transition: transform 0s;
+      }
+
+      .page img {
+        width: 100%;
+        height: 100%;
+        /* object-fit: cover; */
+        display: block;
+        pointer-events: none;
+        filter: contrast(0.9);
+      }
+
+      .nav-buttons {
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+      }
+
+      .book-container {
+        perspective: 1000px;
+        width: 90vw;
+        max-width: 400px;
+        height: 60vh;
+        /* max-height: 300px; */
+        position: relative;
+        touch-action: pan-y pinch-zoom;
+        margin: 0 auto;
+      }
+
+      /* Overlay to prevent context menu */
+      .download-protection {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        pointer-events: none;
+      }
+
+      button {
+        padding: 8px 16px;
+        cursor: pointer;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+      }
+
+      button:disabled {
+        background: #cccccc;
+        cursor: not-allowed;
+      }
     </style>
   </head>
   <body>
@@ -134,6 +218,7 @@
           <button class="tab-button" data-tab="videos">Videos</button>
           <button class="tab-button" data-tab="past">Our Track Records</button>
           <button class="tab-button" data-tab="future">Our Vision</button>
+          <button class="tab-button" data-tab="manifesto">Manifesto</button>
         </div>
         <div class="tab-content">
           <div class="tab-pane active" id="home">
@@ -520,6 +605,55 @@
               <li>New Mosque</li>
             </ul>
           </div>
+
+          <div class="tab-pane" id="manifesto">
+            <h2>Manifesto</h2>
+
+            <!-- <div class="download-protection"></div> -->
+            <div class="book-container">
+              <div class="book">
+                <div class="page" id="page1">
+                  <img src="manifesto/page1.jpg" alt="Page 1" draggable="false" />
+                </div>
+                <div class="page" id="page2">
+                  <img src="manifesto/page2.jpg" alt="Page 2" draggable="false" />
+                </div>
+                <div class="page" id="page3">
+                  <img src="manifesto/page3.jpg" alt="Page 3" draggable="false" />
+                </div>
+                <div class="page" id="page4">
+                  <img src="manifesto/page4.jpg" alt="Page 4" draggable="false" />
+                </div>
+                <div class="page" id="page5">
+                  <img src="manifesto/page5.jpg" alt="Page 5" draggable="false" />
+                </div>
+                <div class="page" id="page6">
+                  <img src="manifesto/page6.jpg" alt="Page 6" draggable="false" />
+                </div>
+                <div class="page" id="page7">
+                  <img src="manifesto/page7.jpg" alt="Page 7" draggable="false" />
+                </div>
+                <div class="page" id="page8">
+                  <img src="manifesto/page8.jpg" alt="Page 8" draggable="false" />
+                </div>
+                <div class="page" id="page9">
+                  <img src="manifesto/page9.jpg" alt="Page 9" draggable="false" />
+                </div>
+
+                <div class="page" id="page10">
+                  <img src="manifesto/page10.jpg" alt="Page 10" draggable="false" />
+                </div>
+              </div>
+              <!-- <div class="nav-buttons">
+                <button id="prevBtn" disabled>Previous</button>
+                <button id="nextBtn">Next</button>
+              </div> -->
+            </div>
+            <div class="nav-buttons">
+              <button id="prevBtn" disabled>Previous</button>
+              <button id="nextBtn">Next</button>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -540,6 +674,130 @@
           });
         });
       });
+
+      // Prevent typical download methods
+      // document.addEventListener("contextmenu", (e) => {
+      //   e.preventDefault();
+      //   return false;
+      // });
+
+      document.addEventListener("dragstart", (e) => {
+        e.preventDefault();
+        return false;
+      });
+
+      // Disable screenshot/save image via keyboard shortcuts
+      document.addEventListener("keydown", (e) => {
+        // Prevent Ctrl+C, Ctrl+S, PrtScn
+        if ((e.ctrlKey && (e.key === "c" || e.key === "s")) || e.key === "PrintScreen") {
+          e.preventDefault();
+          return false;
+        }
+      });
+
+      const book = document.querySelector(".book");
+      const pages = document.querySelectorAll(".page");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      let currentPage = 0;
+      let startX = 0;
+      let currentX = 0;
+      let isDragging = false;
+
+      // Rest of the previous JavaScript remains the same...
+      // (Full previous script continues here)
+      function initializePages() {
+        pages.forEach((page, index) => {
+          if (index === 0) {
+            page.style.transform = "rotateY(0deg)";
+            page.style.zIndex = pages.length;
+          } else {
+            page.style.transform = "rotateY(0deg)";
+            page.style.zIndex = pages.length - index;
+          }
+        });
+      }
+
+      function turnPage(direction) {
+        if (direction === "next" && currentPage < pages.length - 1) {
+          pages[currentPage].style.transform = "rotateY(-180deg)";
+          currentPage++;
+        } else if (direction === "prev" && currentPage > 0) {
+          pages[currentPage - 1].style.transform = "rotateY(0deg)";
+          currentPage--;
+        }
+
+        prevBtn.disabled = currentPage === 0;
+        nextBtn.disabled = currentPage === pages.length - 1;
+      }
+
+      function handleTouchStart(e) {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+
+        if (currentPage < pages.length) {
+          pages[currentPage].classList.add("turning");
+        }
+      }
+
+      function handleTouchMove(e) {
+        if (!isDragging) return;
+
+        e.preventDefault();
+        currentX = e.touches[0].clientX;
+        const diff = currentX - startX;
+        const currentRotation = Math.min(0, Math.max(-180, (diff / book.offsetWidth) * -180));
+
+        if (currentPage < pages.length) {
+          pages[currentPage].style.transform = `rotateY(${currentRotation}deg)`;
+        }
+      }
+
+      function handleTouchEnd(e) {
+        if (!isDragging) return;
+
+        isDragging = false;
+        const diff = currentX - startX;
+
+        if (currentPage < pages.length) {
+          pages[currentPage].classList.remove("turning");
+        }
+
+        const swipeThreshold = window.innerWidth * 0.15;
+
+        if (Math.abs(diff) > swipeThreshold) {
+          if (diff < 0 && currentPage < pages.length - 1) {
+            turnPage("next");
+          } else if (diff > 0 && currentPage > 0) {
+            turnPage("prev");
+          } else {
+            if (currentPage < pages.length) {
+              pages[currentPage].style.transform = "rotateY(0deg)";
+            }
+          }
+        } else {
+          if (currentPage < pages.length) {
+            pages[currentPage].style.transform = "rotateY(0deg)";
+          }
+        }
+      }
+
+      prevBtn.addEventListener("click", () => turnPage("prev"));
+      nextBtn.addEventListener("click", () => turnPage("next"));
+
+      book.addEventListener("touchstart", handleTouchStart, { passive: true });
+      book.addEventListener("touchmove", handleTouchMove, { passive: false });
+      book.addEventListener("touchend", handleTouchEnd);
+
+      initializePages();
+
+      document.addEventListener(
+        "touchmove",
+        (e) => {
+          e.preventDefault();
+        },
+        { passive: false }
+      );
     </script>
   </body>
 </html>

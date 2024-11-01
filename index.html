@@ -113,7 +113,11 @@
           margin-right: 2rem;
           margin-bottom: 0;
         }
-        
+
+        .book-container {
+          width: 95vw;
+          height: 70vh;
+        }
       }
 
       @media (min-width: 1024px) {
@@ -181,7 +185,7 @@
         margin: 0 auto;
       }
 
-      /* Overlay to prevent context menu */
+      /* Overlay to prevent context menu
       .download-protection {
         position: fixed;
         top: 0;
@@ -190,7 +194,7 @@
         height: 100%;
         z-index: 9999;
         pointer-events: none;
-      }
+      } */
 
       button {
         padding: 8px 16px;
@@ -688,13 +692,13 @@
       });
 
       // Disable screenshot/save image via keyboard shortcuts
-      document.addEventListener("keydown", (e) => {
-        // Prevent Ctrl+C, Ctrl+S, PrtScn
-        if ((e.ctrlKey && (e.key === "c" || e.key === "s")) || e.key === "PrintScreen") {
-          e.preventDefault();
-          return false;
-        }
-      });
+      // document.addEventListener("keydown", (e) => {
+      //   // Prevent Ctrl+C, Ctrl+S, PrtScn
+      //   if ((e.ctrlKey && (e.key === "c" || e.key === "s")) || e.key === "PrintScreen") {
+      //     e.preventDefault();
+      //     return false;
+      //   }
+      // });
 
       const book = document.querySelector(".book");
       const pages = document.querySelectorAll(".page");
@@ -792,13 +796,13 @@
 
       initializePages();
 
-      document.addEventListener(
-        "touchmove",
-        (e) => {
-          e.preventDefault();
-        },
-        { passive: false }
-      );
+      // document.addEventListener(
+      //   "touchmove",
+      //   (e) => {
+      //     e.preventDefault();
+      //   },
+      //   { passive: false }
+      // );
     </script>
   </body>
 </html>

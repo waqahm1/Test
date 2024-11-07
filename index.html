@@ -96,6 +96,20 @@
         margin-bottom: 1rem;
       }
 
+      .future-plans {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 2rem 2rem 2rem;
+      }
+      .future-plans img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+      }
+
       /* Mobile-first responsive design */
       @media (min-width: 768px) {
         .video {
@@ -110,6 +124,15 @@
           align-items: flex-start;
         }
         .who-we-are img {
+          margin-right: 2rem;
+          margin-bottom: 0;
+        }
+
+        .future-plans {
+          flex-direction: row;
+          align-items: flex-start;
+        }
+        .future-plans img {
           margin-right: 2rem;
           margin-bottom: 0;
         }
@@ -176,7 +199,7 @@
 
       .book-container {
         perspective: 1000px;
-        width: 90vw;
+        width: 85vw;
         max-width: 400px;
         height: 60vh;
         /* max-height: 300px; */
@@ -309,92 +332,6 @@
               </div>
             </div>
           </div>
-
-          <!-- <div class="tab-pane active" id="who-we-are">
-            <h2>Who We Are</h2>
-            <div class="who-we-are">
-              <img src="assets/bf.png" alt="Candidate Photo" />
-              <p>
-                My name is Bilal Farooq, and I am honored to stand as a candidate for the Chairman of the Gravesend and Dartford Muslim Association in the 2024 election. My journey has been shaped by a strong educational foundation, diverse
-                professional experiences, and a deep commitment to community service. I hold a Bachelor’s degree in Civil Engineering from the University of Engineering and Technology, Lahore, Pakistan, and a Master’s degree in Construction
-                Management and Economics from a UK university. My professional career began in Saudi Arabia, where I worked as an engineer, followed by a role as a sub-agent in a major construction group in the UK until 2010. Since then, I have been
-                self-employed in the home improvement business. In 2012, I joined the Gravesend and Dartford Muslim Association as an executive member, and in 2021, I was elected Chairman. Under my leadership, we have achieved significant milestones,
-                including organizing Eid in the Park in collaboration with Shah Jalal Mosque, leading initiatives such as Interfaith Taste Ramadan, Interfaith Walk, and School Visits, and coordinating the Flag Raising Ceremony. I also organized a
-                protest against the burning of the Quran, uniting local leadership to stand against hate, and conducted Q&A sessions with A-level students to promote understanding of our faith. I also took the initiative to take part in the million
-                march for Palestine to represent the Gravesham community as well as organising the career work shop. If re-elected as Chairman, I am committed to giving back to the community by introducing new youth members and fresh faces who are
-                ready to serve with exciting new policies. We will hold youth workshops and utilize online platforms to gather ideas and create youth sub-committees for future initiatives. Our manifesto will soon be introduced, and our candidates
-                will be visiting you to explain our policies and engage with the community. I am passionate about fostering interfaith dialogue, enhancing community services, and supporting the growth and development of our community. Together, we
-                can build a stronger, more inclusive future.
-              </p>
-            </div>
-
-            <div class="who-we-are">
-              <img src="assets/aknew.png" alt="Candidate Photo" />
-              <p>
-                Adnan Khan is fellow member of Institute of Chartered Accountants and also fellow member of Institute of Business Continuity. Adnan brings along with him extensive governance and leadership experience while working in five countries.
-                Currently, Adnan holds senior management position in a prestigious Insurance firm based in London City, along with siting on boards of three London City based firms as Non-Executive Director. Adnan is first Muslim to be appointed as
-                non-executive director for these three large firms. Adnan is also managing an accounting firm and is also apartner in “Online School” which aims to provide quality education to students from across the world at a discretionary
-                affordable fees. The Ultimate objective of the project is to provide free education by UK based teachers to students in underprivileged areas of Pakistan. Adnan is an experienced coach and is closely associated with charity “Future
-                Frontiers”. Being part of the charity, Adnan has worked with teenagers from underprivileged background, providing them coaching and guidance to facilitate informed career decisions. Adnan is planning to bring the charity to our
-                community to facilitate our teenagers. Apart from Future Frontier, Adnan is also associated with London Ambulance and Macmillan Cancer Support and have raised substantial amount through “Brave the Shave” initiative. Mrs Adnan is
-                managing a local catering business, while their eldest son is studying law in London City, daughter has just completed her GCSE and the youngest is in year 9. Adnan wants to bring his extensive experience in governance, leadership,
-                crisis management and coaching to serve the Gravesend Muslim Community and play his role to portray soft image of Muslim Community across Gravesend and Dartford area. Adnan will also be arranging periodic surgeries for the community,
-                where experts in taxation, immigration and other legal matters will provide free of charge of consultation.
-              </p>
-            </div>
-
-            <div class="who-we-are">
-              <img src="assets/t.png" alt="Candidate Photo" />
-              <p>IMRAN PROFILE</p>
-            </div>
-
-            <div class="who-we-are">
-              <img src="assets/oinew.png" alt="Candidate Photo" />
-              <p>
-                My name is Omar Ilyas and I work in international business development. I have worked for some large retail and hospitality brands, managing experience, hospitality, corporate relations and international development, connecting with
-                government authorities around the world as well as at council level within central London. My business experience has given me the opportunity to work in many countries across the middle east and far east, and I am able to speak a few
-                languages conversationally, including Spanish and Arabic. I was born and brought up in south London to Pakistani Punjabi and Kashmiri parents, and recently moved to Gravesend where I have been impressed by the strength of the Muslim
-                community. I have always been close to charitable projects and want to spend my spare time being dedicated to my faith and my local community. I am very keen to support the day to dayoperations of the masjid whilst also helping to
-                develop new outreach programmes to the wider Gravesham population, supporting muslim integration within the area, as well as relations with other faith groups. I look forward to serving our community together.
-              </p>
-            </div>
-
-            <div class="who-we-are">
-              <img src="assets/smnew.png" alt="Candidate Photo" />
-              <p>
-                My name is Shiyamin Mohamed, I have professionally extensive experience in various ICT roles across government sectors, private enterprises, the NHS, and the United Nations - ILO. Charity is a fundamental pillar of Islam, and I am
-                deeply passionate about making a positive impact in the community through dedicated charity work, particularly focusing on rural entrepreneurship and children’s educational needs. My journey in charity work began after my Graduation
-                with my role at the United Nations - ILO, where I worked on a rural entrepreneurship development program in Sri Lanka. This experience ignited a profound sense of purpose and commitment to helping startups and contributing to the
-                economy. Since then, I have organized fundraising campaigns to support my school, which led to the establishment of a proper organization to elevate our charity work. As one of the founders of the registered charity Old Sokians United
-                kingdom and current President, I have initiated various projects benefiting the education of children at my school. These projects include donations of science books, laptops, cricket kits for the school cricket team, PA addressing
-                systems, overhead projectors, air rifles for the shooting team, renovation of staff washroom facilities, enhancing hygiene for primary children, and renovation of chemistry lab. Beyond my school, also donated an ultrasound scanner to
-                our local hospital to benefit community and constructed toilet facilities in rural schools, along with donating shoes, socks, and savings accounts with an initial deposit for all children. I believe that charity work is not just about
-                giving but also about empowering others and fostering sustainable change. My passion is to continue contributing to meaningful charity work that benefit our community, improve the quality of life for future generations, and advocate
-                for the causes I am passionate about.
-              </p>
-            </div>
-
-            <div class="who-we-are">
-              <img src="assets/yanew.png" alt="Candidate Photo" />
-              <p>
-                I am writing to express my keen interest in serving as an Executive Member of the Board of Trustees for the Gravesend and Dartford Muslims Association. With a strong academic background in business and financial management and over a
-                decade of experience in retail management and commercial analysis, I am confident in my ability to contribute meaningfully to the Association's mission. My experience in data analysis and strategic decision-making, coupled with my
-                commitment to community service, aligns well with the Association's goals. I am passionate about using my skills to help build a stronger, more inclusive community for Muslims in Gravesend and Dartford. I believe that my educational
-                qualifications, professional experience, and dedication to community engagement make me a strong candidate for this position. I am eager to work collaboratively with the Board of Trustees and the wider community to promote the values
-                of Islam and to support the needs of our members. I am particularly interested in exploring opportunities to enhance the Association's financial sustainability, improve its communication and outreach efforts, and strengthen its
-                partnerships with other community organizations. I am committed to serving the Association with integrity, transparency, and a focus on delivering positive outcomes for our members.
-              </p>
-            </div>
-
-            <div class="who-we-are">
-              <img src="assets/wa.png" alt="Candidate Photo" />
-              <p>
-                I was born and raised in Gravesend, where I have spent my life witnessing the growth and expansion of the Muslim community through different nationalities and cultures. This multicultural environment not only shaped my worldview but
-                also instilled in me a strong sense of community and belonging. I studied Computer Science at university, and with the skills I attained, I am now working as a Software Developer in London for an International Law Firm. I am always
-                available to provide support to the Mosque, no matter how small.
-              </p>
-            </div>
-          </div> -->
 
           <div class="tab-pane" id="who-we-are">
             <h2>Meet Our Team</h2>
@@ -592,24 +529,101 @@
           </div>
 
           <div class="tab-pane" id="past">
-            <h2>Out Track Records</h2>
+            <h2>Our Track Records</h2>
+            <div class="video-container">
+              <div class="video">
+                <img src="images/eid.png" alt="Eid in the Park" />
+                <h3>🌳 Eid in the Park</h3>
+              </div>
+              <div class="video">
+                <img src="images/mosque.JPG" alt="Youth Mentorship Program" />
+                <h3>📚 Huge improvements to GDMA Madrasah</h3>
+              </div>
+              <div class="video">
+                <img src="images/sports.JPG" alt="Youth Mentorship Program" />
+                <h3>🏆 Children's and Adult's Sports Club</h3>
+              </div>
+              <div class="video">
+                <img src="images/protest.JPG" alt="Youth Mentorship Program" />
+                <h3>🕊 Protests against burning of the Qur’an</h3>
+              </div>
+            </div>
             <ul>
-              <li>Eid in the Park</li>
-              <li>Eid in the Park</li>
-              <li>Eid in the Park</li>
-              <li>Eid in the Park</li>
-              <li>Eid in the Park</li>
+              <li>🏠 Purchase of residence for Imam</li>
+              <li>♀️ Creation of women’s committee</li>
+              <li>👴 Regular social activities for senior citizens</li>
+              <li>🎓 Careers day for young people</li>
+              <li>🛡 Arranged Security Guards for Mosque</li>
             </ul>
           </div>
+
           <div class="tab-pane" id="future">
-            <h2>Our Vision</h2>
-            <ul>
-              <li>New Mosque</li>
-              <li>New Mosque</li>
-              <li>New Mosque</li>
-              <li>New Mosque</li>
-              <li>New Mosque</li>
-            </ul>
+            <h2 style="padding: 0 2rem 0 2rem">Our Vision</h2>
+
+            <div class="future-plans">
+              <div>
+                <h3>📘 Education: Supporting learning for all</h3>
+                <p>Education is central to our community’s strength. We will expand learning opportunities for all ages, ensuring access to knowledge and spiritual growth for everyone.</p>
+                <ul>
+                  <li><b>Tafsir classes in English:</b> These new classes will help us all connect more deeply with our faith.</li>
+                  <li><b>Women’s classes:</b> Regular classes for women during the day to provide opportunities for our sisters.</li>
+                  <li><b>Classes for children with Special Educational Needs (SEN):</b>We’ll provide dedicated classes to support children with SEN, creating an inclusive learning environment where every child can succeed.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="future-plans">
+              <div>
+                <h3>🌹 GDMA Funeral Fund: Support in times of need</h3>
+                <p>
+                  No family should have to worry about financial burdens in times of loss. We will establish the GDMA Funeral Fund, which will collect a small annual amount to <b>cover funeral and burial costs.</b> This is a model that has been
+                  adopted in many other mosques across the country and will provide <b>essential support when it’s needed most.</b>
+                </p>
+              </div>
+            </div>
+            <div class="future-plans">
+              <div>
+                <h3>🌸 Sister’s activities: a welcoming space for all</h3>
+
+                <p>
+                  We’ve established a women’s sub-committee but there’s a lot more to do. we’re committed to expanding programmes that serve the needs and interests of our sisters. This includes <b>educational workshops and social gatherings</b> that
+                  create meaningful opportunities for our sisters can be an active part of the mosque.
+                </p>
+              </div>
+            </div>
+
+            <div class="future-plans">
+              <div>
+                <h3>🌟 Youth Engagement: empowering the next generation</h3>
+                <p>Our young people are the future of our community, and we’re committed to giving them a voice and opportunities to lead.</p>
+                <ul>
+                  <li><b>Youth committee:</b> Establish a youth committee to give young people a platform in decision-making and a say in shaping the future of the mosque.</li>
+                  <li><b>Expanded summer activities:</b> Build on our existing sports groups by organising regular activities during the summer holidays.</li>
+                  <li><b>Leadership Development:</b> Introduce workshops and mentoring programmes to help our youth build essential skills and prepare for future roles within the community.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="future-plans">
+              <div>
+                <h3>🛠 Upgrading and expanding our mosque</h3>
+                <p>Education is central to our community’s strength. We will expand learning opportunities for all ages, ensuring access to knowledge and spiritual growth for everyone.</p>
+                <ul>
+                  <li><b>Tafsir classes in English:</b> These new classes will help us all connect more deeply with our faith.</li>
+                  <li><b>Women’s classes:</b> Regular classes for women during the day to provide opportunities for our sisters.</li>
+                  <li><b>Classes for children with Special Educational Needs (SEN):</b>We’ll provide dedicated classes to support children with SEN, creating an inclusive learning environment where every child can succeed.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="future-plans">
+              <div>
+                <h3>🕌 Building a new mosque for the future</h3>
+                <p>
+                  Our community is expanding, and we need a mosque that reflects this growth. We’re committed to working toward a purpose-built mosque in Gravesend that will serve as a welcoming space for prayer, education, and community gatherings.
+                  This new mosque will be a lasting resource for us and for future generations.
+                </p>
+              </div>
+            </div>
           </div>
 
           <div class="tab-pane" id="manifesto">

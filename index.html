@@ -124,6 +124,25 @@
         text-align: center;
       }
 
+      /* Wrapper for responsive aspect ratio */
+      .video-container-videos {
+        position: relative;
+        width: 80%; /* Adjust to control size */
+        max-width: 800px; /* Set a max width */
+        padding-top: 56.25%; /* 16:9 Aspect Ratio (9 / 16 = 0.5625 or 56.25%) */
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
       /* Mobile-first responsive design */
       @media (min-width: 768px) {
         .video {
@@ -339,7 +358,7 @@
                 <div style="font-size: 1.2rem; color: #4a5c66">
                   <p style="margin-bottom: 1rem">📍 Gravesend Central Mosque, Albion Terrace, Gravesend DA12 2SX</p>
                   <p style="margin-bottom: 0.5rem">📅 Sunday 15th December 2024</p>
-                  <p style="margin-bottom: 1rem">⏰ 8:00 AM - 8:00 PM</p>
+                  <p style="margin-bottom: 1rem">⏰ 8:00AM - 7:30PM</p>
                 </div>
               </div>
 
@@ -470,7 +489,7 @@
             <div style="margin: 2rem auto; max-width: 800px; background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)">
               <h3 style="color: #35424a; margin-bottom: 1rem">Campaign Message</h3>
               <div class="video" style="margin-bottom: 1rem; display: inline-flex">
-                <video width="100%" controls>
+                <video width="100%" controls poster="assets/ak.jpeg">
                   <source src="assets/homepageSmall.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
@@ -487,24 +506,17 @@
               </div>
               <div class="video">
                 <video width="100%" controls>
-                  <source src="assets/IMG_0103.MOV" type="video/mp4" />
+                  <source src="assets/itvideo.MOV" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-                <p>Secretary</p>
+                <p>Imran Tahir - Standing for Secretary</p>
               </div>
               <div class="video">
                 <video width="100%" controls>
-                  <source src="assets/IMG_0103.MOV" type="video/mp4" />
+                  <source src="assets/akvideo.MOV" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-                <p>Treasurer</p>
-              </div>
-              <div class="video">
-                <video width="100%" controls>
-                  <source src="assets/IMG_0103.MOV" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-                <p>Executive Member</p>
+                <p>Adnan Khan - Standing for Treasurer</p>
               </div>
               <div class="video">
                 <video width="100%" controls>
@@ -526,6 +538,14 @@
                   Your browser does not support the video tag.
                 </video>
                 <p>Executive Member</p>
+              </div>
+
+              <div class="video">
+                <video width="100%" controls>
+                  <source src="assets/wavideo.MOV" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <p>Waqar Ahmad - Standing for Executive Member</p>
               </div>
             </div>
           </div>
@@ -700,40 +720,40 @@
             <div class="book-container">
               <div class="book">
                 <div class="page" id="page1">
-                  <img src="manifesto/page1.jpg" alt="Page 1" draggable="false" />
+                  <img src="newmanifesto/page1.jpg" alt="Page 1" draggable="false" />
                 </div>
                 <div class="page" id="page2">
-                  <img src="manifesto/page2.jpg" alt="Page 2" draggable="false" />
+                  <img src="newmanifesto/page2.jpg" alt="Page 2" draggable="false" />
                 </div>
                 <div class="page" id="page3">
-                  <img src="manifesto/page3.jpg" alt="Page 3" draggable="false" />
+                  <img src="newmanifesto/page3.jpg" alt="Page 3" draggable="false" />
                 </div>
                 <div class="page" id="page4">
-                  <img src="manifesto/page4.jpg" alt="Page 4" draggable="false" />
+                  <img src="newmanifesto/page4.jpg" alt="Page 4" draggable="false" />
                 </div>
                 <div class="page" id="page5">
-                  <img src="manifesto/page5.jpg" alt="Page 5" draggable="false" />
+                  <img src="newmanifesto/page5.jpg" alt="Page 5" draggable="false" />
                 </div>
                 <div class="page" id="page6">
-                  <img src="manifesto/page6.jpg" alt="Page 6" draggable="false" />
+                  <img src="newmanifesto/page6.jpg" alt="Page 6" draggable="false" />
                 </div>
                 <div class="page" id="page7">
-                  <img src="manifesto/page7.jpg" alt="Page 7" draggable="false" />
+                  <img src="newmanifesto/page7.jpg" alt="Page 7" draggable="false" />
                 </div>
                 <div class="page" id="page8">
-                  <img src="manifesto/page8.jpg" alt="Page 8" draggable="false" />
+                  <img src="newmanifesto/page8.jpg" alt="Page 8" draggable="false" />
                 </div>
                 <div class="page" id="page9">
-                  <img src="manifesto/page9.jpg" alt="Page 9" draggable="false" />
+                  <img src="newmanifesto/page9.jpg" alt="Page 9" draggable="false" />
                 </div>
                 <div class="page" id="page10">
-                  <img src="manifesto/page10.jpg" alt="Page 10" draggable="false" />
+                  <img src="newmanifesto/page10.jpg" alt="Page 10" draggable="false" />
                 </div>
                 <div class="page" id="page11">
-                  <img src="manifesto/page11.jpg" alt="Page 11" draggable="false" />
+                  <img src="newmanifesto/page11.jpg" alt="Page 11" draggable="false" />
                 </div>
                 <div class="page" id="page10">
-                  <img src="manifesto/page12.jpg" alt="Page 12" draggable="false" />
+                  <img src="newmanifesto/page12.jpg" alt="Page 12" draggable="false" />
                 </div>
               </div>
             </div>
